@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Wiiquel</title>
+    <meta name="description" content="Gesture controlled user interface" />
+
+    <meta charset="UTF-8">
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/1ec1e62675.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="main.css">
+
+
+</head>
+
+<body>
+
+
+    <div id="intro" style="">
+        <img src="logo.png">
+
+        <button onclick="toggleVideo()" id="trackbutton" type="button">
+            <i class="fas fa-cog fa-spin"></i> &nbsp;Loading handtrack.js
+        </button>
+
+    </div>
+
+
+    <div id="ui" style="display:none">
+
+        <img src="cursor.png" id="cursor">
+
+        <div id="option1" onclick="openOption($(this).attr('id'));" class="option btn_op" style="left:0;top:0;w">
+            <div class="pie_progress" role="progressbar" data-goal="-50" data-barcolor="#0295C8" data-barsize="10"
+                aria-valuemin="-100" aria-valuemax="100">
+                <div class="pie_progress__content"><i class="fab fa-instagram big_icon"></i><br>Instagram</div>
+            </div>
+        </div>
+        <div id="option2" onclick="openOption($(this).attr('id'));" class="option btn_op" style="right:0;top:0;">
+            <div class="pie_progress" role="progressbar" data-goal="-50" data-barcolor="#0295C8" data-barsize="10"
+                aria-valuemin="-100" aria-valuemax="100">
+                <div class="pie_progress__content"><i class="fab fa-twitter big_icon"></i><br>Twitter</div>
+            </div>
+        </div>
+        <div id="option3" onclick="openOption($(this).attr('id'));" class="option btn_op" style="left:0;bottom:0;">
+            <div class="pie_progress" role="progressbar" data-goal="-50" data-barcolor="#0295C8" data-barsize="10"
+                aria-valuemin="-100" aria-valuemax="100">
+                <div class="pie_progress__content"><i class="fab fa-youtube big_icon"></i><br>Youtube</div>
+            </div>
+        </div>
+        <div id="option4" onclick="openOption($(this).attr('id'));" class="option btn_op" style="right:0;bottom:0;">
+            <div class="pie_progress" role="progressbar" data-goal="-50" data-barcolor="#0295C8" data-barsize="10"
+                aria-valuemin="-100" aria-valuemax="100">
+                <div class="pie_progress__content"><i class="fas fa-question big_icon"></i><br>Credits</div>
+            </div>
+        </div>
+        <div id="option5" onclick="openOption($(this).attr('id'));" class="option"
+            style="right:0;top:31%;display:none;z-index:3;">
+            <div class="pie_progress" role="progressbar" data-goal="-50" data-barcolor="#0295C8" data-barsize="10"
+                aria-valuemin="-100" aria-valuemax="100">
+                <div class="pie_progress__content"><i class="fas fa-home big_icon"></i><br>Home</div>
+            </div>
+        </div>
+
+
+
+
+        <div id="updatenote" style="display:none"> loading model ..</div>
+
+
+
+
+        <div id="webcam">
+            <video class="videobox canvasbox" autoplay="autoplay" id="myvideo" style="display:none"></video>
+
+            <canvas id="canvas" class="border canvasbox"></canvas>
+
+            <br>
+
+            <i class="far fa-hand-paper"></i> &nbsp;Move your hand in front of the webcam to move the cursor
+        </div>
+
+        <div id="info"></div>
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script src="https://unpkg.com/carbon-components@latest/scripts/carbon-components.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"> </script>
+
+
+    <link rel="stylesheet" href="progress/progress.css">
+    <script src="progress/progress.js"></script>
+
+
+    <script src="main.js?v=3"></script>
+
+
+
+    <!--audio-->
+
+    <audio id="sound_intro">
+        <source src="intro.mp3?v=2" type="audio/mp3">
+    </audio>
+
+    <audio id="sound_click">
+        <source src="click.mp3" type="audio/mp3">
+    </audio>
+
+
+
+</body>
+
+</html>
