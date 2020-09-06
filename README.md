@@ -13,3 +13,4 @@
 
 - javascript
 - handtrack.js
+- jquery-asPieProgress
